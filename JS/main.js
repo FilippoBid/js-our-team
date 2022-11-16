@@ -1,3 +1,4 @@
+const rowContainerElement = document.getElementById("riga")
 const colleagues = [
     { 
         nameSurname:"Wayne Barnett",
@@ -7,32 +8,31 @@ const colleagues = [
     { 
         nameSurname:"Angela Caroll",
         occupation:"Chief Editor",
-        imgSrc:"wayne-barnett-founder-ceo.jpg"
+        imgSrc:"angela-caroll-chief-editor.jpg"
     },
     { 
         nameSurname:"Walter Gordon",
         occupation:"Office Manager",
-        imgSrc:"wayne-barnett-founder-ceo.jpg"
+        imgSrc:" walter-gordon-office-manager.jpg"
     },
     { 
         nameSurname:"Angela Lopez",
         occupation:"Social Media Manager",
-        imgSrc:"wayne-barnett-founder-ceo.jpg"
+        imgSrc:"angela-lopez-social-media-manager.jpg"
     },
     { 
         nameSurname:"Scott Estrada",
         occupation:"Developer",
-        imgSrc:"wayne-barnett-founder-ceo.jpg"
+        imgSrc:"scott-estrada-developer.jpg"
     },
     { 
         nameSurname:"Barbara Ramos",
         occupation:"Graphic Designer",
-        imgSrc:"wayne-barnett-founder-ceo.jpg"
+        imgSrc:"barbara-ramos-graphic-designer.jpg"
     },
 
 ]
 
-const rowContainerElement = document.querySelector("row")
 //******************************************************************************************************************************************************* */
 //******************************************************************************************************************************************************* */
 //******************************************************************************************************************************************************* */
@@ -43,11 +43,13 @@ const rowContainerElement = document.querySelector("row")
 
 function htmlPrintCard (container,arrayObjects){
     
-    for(i=0;i<arrayObjects;i++){
+    for(let i=0;i<arrayObjects.length;i++){
         const createDiv = document.createElement("div");
         createDiv.classList.add("col");
         createDiv.classList.add("d-flex");
-        createDiv.classList.add("justify-content-center");
+        createDiv.classList.add("rounded-5");
+        createDiv.classList.add("flex-wrap");
+        createDiv.classList.add("justify-content-center");                                                           
         createDiv.classList.add("p-2");
         createDiv.classList.add("bg-success");
         const createH3 = document.createElement("h3");
